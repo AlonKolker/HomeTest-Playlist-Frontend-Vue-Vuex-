@@ -1,6 +1,6 @@
 <template>
-  <section v-if="selectedVideo">
-    <iframe width="420" height="315" :src="selectedVideo.url"> </iframe>
+  <section v-if="selectedVideo" class="selceted-video-conteiner">
+    <iframe width="600" height="320" :src="selectedVideo.url"> </iframe>
     <div>Currently playing: "{{selectedVideo.name}}"</div>
   </section>
 </template>

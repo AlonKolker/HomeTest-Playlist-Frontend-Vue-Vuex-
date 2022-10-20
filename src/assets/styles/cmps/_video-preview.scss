@@ -1,0 +1,22 @@
+.video-preview-conteiner{
+    width: 500px;
+padding: 10px;
+margin-bottom: 3px;
+border: 3px solid black;
+cursor: pointer;
+&:hover{
+    background-color: lightgray;
+}
+
+.prev-video-tumblr{
+    outline: 4px solid red;
+    margin-inline-end: 8px;
+
+    
+}
+
+.prev-video-name{
+    text-decoration: underline;
+}
+
+}

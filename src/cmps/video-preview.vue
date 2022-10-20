@@ -1,8 +1,11 @@
 <template>
   <section v-if="video" class="video-preview-conteiner flex">
-    <img :src="video.thumbnail" alt="" />
-    <div>{{ video.titile }}</div>
-    <div>{{ video.description }}</div>
+    <img class="prev-video-tumblr" :src="video.thumbnail" alt="" />
+    <div>
+      <h1 class="prev-video-name">{{ video.name }}</h1>
+      <h5>{{ video.description }}</h5>
+
+    </div>
     <div>{{ video.TotalVots }}</div>
   </section>
 </template>

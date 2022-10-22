@@ -1,6 +1,6 @@
 <template>
   <section class="filter">
-    <form @click.prevent="onSearchBy()" class="flex">
+    <form @click.prevent="onSearchBy" type="submit" class="flex">
       <input class="filter-input" v-model="text" type="text" placeholder="Search on youtube.." />
       <!-- <input   @input.prevent="onSearchBy()" passive: true v-model="text" type="text" placeholder="Search" > -->
       <button class="search-btn" type="submit">Search</button>

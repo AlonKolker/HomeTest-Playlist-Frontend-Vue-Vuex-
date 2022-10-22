@@ -30,13 +30,10 @@ export const videoStore = {
     },
   },
   actions: {
-    async loadVideos({ commit,dispatch,getters ,state }) {
-      console.log('loadVideos',state.selectedVid);
-      // let searchBy = getters.searchBy
+    async loadVideos({ commit,dispatch,state }) {
       try {
-        const videos = await videoService.query()
+        const videos = await videoService.query(state.searchBy)
         commit({ type: "setVideos", videos })
-        // if(state.slectedVideo === null){
           let selectedVid = videos[0]
           await dispatch('setSelectedVideo',{selectedVid} )
         // }

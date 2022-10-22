@@ -9,13 +9,13 @@ export const videoService = {
 }
 
 
-let gVidoes = (await storageService.query("videos")) || {}
+// let gVidoes = (await storageService.query("videos")) || {} //For preventing api exceeded
+let gVidoes
 
-async function query(searchBy = "dog") {
-  console.log(gVidoes.length)
-  if (gVidoes.length > 0) return gVidoes
+async function query(searchBy = "javascript") {
+  console.log(searchBy);
+  // if (gVidoes.length > 0) return gVidoes //For preventing api exceeded
   gVidoes = []
-  console.log("try catch")
   try {
     let importedVideos
     await axios
@@ -36,7 +36,7 @@ async function query(searchBy = "dog") {
         })
       })
       .catch((err) => console.log(err))
-    storageService.save("videos", gVidoes)
+    // storageService.save("videos", gVidoes)//For preventing api exceeded
     return gVidoes
   } catch (err) {
     throw err

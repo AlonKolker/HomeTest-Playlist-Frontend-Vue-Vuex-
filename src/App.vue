@@ -1,6 +1,6 @@
 <template>
-  <section class="app-conteiner">
-    <filter />
+  <section class="app-conteiner flex flex-column">
+    <filterCmp />
     <div class="flex">
       <VideoList />
       <SelectedVideoPrev />
@@ -9,14 +9,14 @@
 </template>
 
 <script>
-import filter from "./cmps/filter.vue"
+import filterCmp from "./cmps/serachBy-cmp.vue"
 import VideoList from "./cmps/video-list.vue"
 import SelectedVideoPrev from "./cmps/selected-video-prev.vue"
 
 export default {
   name: "app",
   components: {
-    filter,
+    filterCmp,
     VideoList,
     SelectedVideoPrev,
   },

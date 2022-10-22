@@ -1,9 +1,19 @@
 .filter{
     margin: 0 0 20px 0;
-    input{
+    .filter-input{
         width: 100%;
         padding: 10px;
-        border: 2px solid rgb(176, 172, 172);
+        border: 3px solid rgb(176, 172, 172);
         font-family: sans-serif;
+        border-radius: 6px;
+    margin-inline-end: 6px;
+    
     }
+    .search-btn{
+        border-radius: 6px;
+        padding: 5px;
+        outline: none;
+        border: 1px solid gray;
+    }
+    
 }

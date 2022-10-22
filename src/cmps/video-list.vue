@@ -1,6 +1,5 @@
 <template>
   <section v-if="videos">
-        <!-- <videoPreview /> -->
     <videoPreview v-for="video in videos" :video="video" :key="video._id" />
   </section>
 </template>

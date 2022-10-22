@@ -7,6 +7,7 @@
 
     </div>
     <div>{{ video.TotalVots }}</div>
+    <button @click.prevent="setSelectedVideo" class="prev-play-btb">Play👓</button>
   </section>
 </template>
 
@@ -15,7 +16,13 @@ export default {
   name: "video-preview",
   props: { video: Object },
   created() {},
-  methods: {},
+  methods: {
+    setSelectedVideo(){
+      let selectedVid = this.video
+      this.$store.dispatch({ type: "setSelectedVideo",selectedVid })
+
+    }
+  },
   computed: {
     shortBodyMsg() {
       if (this.feedback.comment.length > 45) return this.feedback.comment.substr(0, 45) + "..."

@@ -14,22 +14,26 @@ export const videoService = {
 
 // _createItems()
 // query()
-async function query(filterBy = "cat") {
+let gVidoes = await storageService.query('videos') || {}
 
+async function query(searchBy = "dog") {
+  
 // return _createItems()
-
-
+console.log(gVidoes.length)
+if(gVidoes.length>0) return gVidoes
+gVidoes = []
+console.log('try catch')
   try {
     let importedVideos
-    let vidoes = []
+    // let vidoes = []
     await axios
       .get(
-        `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&q=${filterBy}videoDuration=any&key=${API_KEY} `
+        `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&q=${searchBy}videoDuration=any&key=${API_KEY} `
       )
       .then((res) => {
         importedVideos = res.data.items
         importedVideos.forEach((vid) => {
-          vidoes.push({
+          gVidoes.push({
             _id: vid.id.videoId,
             url: 'https://www.youtube.com/embed/' + vid.id.videoId,
             name: vid.snippet.title,
@@ -38,8 +42,9 @@ async function query(filterBy = "cat") {
             thumbnail: vid.snippet.thumbnails.default.url,
           })
         })
-      })
-    return vidoes
+      }).catch(err=>console.log(err))
+      storageService.save('videos',gVidoes)
+    return gVidoes
   } catch (err) {
     throw err
   }

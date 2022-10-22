@@ -3,4 +3,14 @@
     flex-direction: column;
     justify-content: center;
     margin-inline-start:10px ;
+    .selectd-video{
+        width: 600px;
+        height: 100%;
+    }
+
+    .Currently-playing-title{
+        font-weight: 600;
+        font-size: 20px;
+    }
+    
 }

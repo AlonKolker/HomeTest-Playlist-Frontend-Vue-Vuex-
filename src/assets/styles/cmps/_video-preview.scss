@@ -5,7 +5,7 @@ margin-bottom: 3px;
 border: 3px solid black;
 cursor: pointer;
 &:hover{
-    background-color: lightgray;
+    background-color: rgb(231, 224, 224);
 }
 
 .prev-video-tumblr{
@@ -14,9 +14,20 @@ cursor: pointer;
 
     
 }
+.video-info{
 
-.prev-video-name{
-    text-decoration: underline;
+    .prev-video-name{
+        text-decoration: underline;
+    }
+    flex-grow: 1;
+}
+.prev-play-btb{
+    
+    font-size:40px;
+    right: 100%;
+    :hover{
+        color: red;
+    }
 }
 
 }

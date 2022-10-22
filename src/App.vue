@@ -1,5 +1,6 @@
 <template>
   <section class="app-conteiner flex flex-column">
+  <div class="app-header">OurTube playlist</div>
     <filterCmp />
     <div class="flex">
       <VideoList />

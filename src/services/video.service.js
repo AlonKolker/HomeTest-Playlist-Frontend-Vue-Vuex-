@@ -17,10 +17,11 @@ async function query(searchBy = "javascript") {
   // if (gVidoes.length > 0) return gVidoes //For preventing api exceeded
   gVidoes = []
   try {
+    let KEY = import.meta.env.VITE_API_KEY
     let importedVideos
     await axios
       .get(
-        `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&q=${searchBy}videoDuration=any&key=${API_KEY} `
+        `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&q=${searchBy}videoDuration=any&key=${KEY} `
       )
       .then((res) => {
         importedVideos = res.data.items

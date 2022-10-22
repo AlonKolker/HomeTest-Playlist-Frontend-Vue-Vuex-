@@ -1,5 +1,5 @@
 
 
-const API_KEY = 'Enter your api here, be curfull this is not secret'
+const API_KEY = 'AIzaSyBYKCvm2CKfCMnCfJBJAfDGgif4jol_bno'
 
 export {API_KEY}

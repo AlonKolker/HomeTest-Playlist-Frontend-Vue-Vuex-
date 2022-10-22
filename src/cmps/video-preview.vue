@@ -16,6 +16,7 @@
 </template>
 
 <script>
+
 export default {
   name: "video-preview",
   props: { video: Object },

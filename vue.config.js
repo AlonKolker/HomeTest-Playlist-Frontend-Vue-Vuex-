@@ -1,4 +1,4 @@
 module.exports = {
-    publicPath: process.env.NODE_ENV === "production" ? "/HomeTest-Playlist-Vue-Vuex/" : "/",
+    publicPath: process.env.NODE_ENV === "production" ? "/homeTest-Playlist-Vue-Vuex/" : "/",
     
     }

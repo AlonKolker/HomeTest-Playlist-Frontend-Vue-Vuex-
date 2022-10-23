@@ -6,7 +6,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base:'/HomeTest-Playlist-Vue-Vuex/',
+  base:'/homeTest-Playlist-Vue-Vuex/',
   plugins: [vue()],
   // resolve: {
   //   alias: {

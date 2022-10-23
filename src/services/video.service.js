@@ -1,7 +1,6 @@
 
 import { storageService } from "./async-storage.service"
 import axios from "axios"
-import { API_KEY } from "../assets/safe/api"
 
 export const videoService = {
   query,
